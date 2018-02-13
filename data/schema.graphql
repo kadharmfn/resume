@@ -1,0 +1,93 @@
+type Query {
+  hello: String
+  user: User
+}
+
+interface Node {
+  id: ID!
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+
+type EducationConnection {
+  pageInfo: PageInfo!
+  edges: [EducationEdge]
+}
+
+type ExperienceConnection {
+  pageInfo: PageInfo!
+  edges: [ExperienceEdge]
+}
+
+type Education implements Node {
+  id: ID!
+  collegeName: String
+  address: String
+  course: String
+  yearOfCompletion: Int
+}
+
+type EducationEdge {
+  node: Education
+  cursor: String!
+}
+
+type Experience implements Node {
+  id: ID!
+  clientName: String
+  clientAddress: String
+  duration: String
+  role: String
+  projects(after: String, first: Int, before: String, last: Int): ProjectConnection
+}
+
+type ExperienceEdge {
+  node: Experience
+  cursor: String!
+}
+
+type ProjectConnection {
+  pageInfo: PageInfo!
+  edges: [ProjectEdge]
+}
+
+type ProjectEdge {
+  node: Project
+  cursor: String!
+}
+
+type Project implements Node {
+  id: ID!
+  name: String
+  responsibilities: [String]
+  skillsAndTools: String
+}
+
+type User implements Node {
+    id: ID!
+    name: String
+    phone: String
+    email: String
+    address: Address
+    professionalExp: ProfessionalExp
+    experience(after: String, first: Int, before: String, last: Int): ExperienceConnection
+    education(after: String, first: Int, before: String, last: Int): EducationConnection
+}
+
+type Address {
+  street1: String
+  street2: String
+  city: String
+  state: String
+  pinCode: Int
+}
+
+type ProfessionalExp {
+  title: String
+  experiences: [String]
+}
