@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Icon from '../../../components/Icon'
+import Card from '../../../components/Card'
 import SectionHeader from '../SectionHeader'
 
 export default class Contact extends Component {
@@ -12,13 +13,13 @@ export default class Contact extends Component {
     render() {
         const { email, phone } = this.props
         return (
-            <div className="card mt-4">
+            <Card className="mt-4">
                 <SectionHeader title="Contact" iconName="address-card"/>
                 <div className="p-3">
-                    <a className="small text-secondary" href="mailto:#"> <Icon name="envelope" /> {email}</a><br/>
-                    <a className="small text-secondary" href={`tel:+${phone}`}><Icon name="phone" /> {phone}</a><br/>
+                    <a className="card-text" href="mailto:#"> <Icon name="envelope" /> {email}</a><br/>
+                    <a className="card-text" href={`tel:+${phone}`}><Icon name="phone" /> {phone}</a><br/>
                 </div>
-            </div>
+            </Card>
         )   
     }
 }

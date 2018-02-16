@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import Card from '../../components/Card'
 import Navigation from '../../components/Navigation'
 import Router from '../../components/Router'
 import routes from '../../routes'
@@ -10,7 +11,7 @@ import routes from '../../routes'
 export default class App extends Component {
     render() {
         return (
-            <div className="bg-material  mb-4">
+            <div className="container-fluid p-0">
                 <Navigation />
                 <Router routes={routes}/>
             </div>

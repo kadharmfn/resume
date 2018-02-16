@@ -9,9 +9,9 @@ export default class Icon extends Component {
 
     render() {
         const { name, className } = this.props
-        const iconClass = `fa fa-${name} ${className}`
+        const iconClass = `text-info fa fa-${name} ${className}`
         return (
-            <i className={iconClass} />
+            <span><i className={iconClass} /></span>
         )
     }
 }

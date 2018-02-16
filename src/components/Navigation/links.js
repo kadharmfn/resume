@@ -5,11 +5,11 @@ const links = [
     }, 
     {
         to: "classic",
-        label: "Classic Resume"
+        label: "Classic"
     },
     {
         to: "modern",
-        label: "Modern Resume"
+        label: "Modern"
     }
 ]
 
