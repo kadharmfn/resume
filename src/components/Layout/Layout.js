@@ -5,6 +5,8 @@ import Header from '../Header'
 import ProfessionalExp from '../ProfessionalExp'
 import Education from '../Education'
 import Experience from '../Experience'
+import Navigation from '../Navigation'
+import Router from '../Router'
 
 class Layout extends Component {
     static propTypes = {
@@ -23,7 +25,7 @@ class Layout extends Component {
     render() {
         const { user } = this.props
         return (
-            <div className="container p-4">
+            <div className="container p-4 card">
                 <Header user={user} showAddress={false}/>
                 <ProfessionalExp professionalExp={user.professionalExp}/>
                 <Experience details={user}/>
