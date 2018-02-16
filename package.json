@@ -41,6 +41,7 @@
     "lodash": "^4.17.5",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-relay": "^1.4.1"
+    "react-relay": "^1.4.1",
+    "react-router-dom": "^4.2.2"
   }
 }

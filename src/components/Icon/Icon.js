@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 
 export default class Icon extends Component {
     static propTypes = {
-        name: PropTypes.string.isRequired
+        name: PropTypes.string.isRequired,
+        className: PropTypes.string,
     }
 
     render() {
-        const { name } = this.props
-        const iconClass = `fa fa-${name}`
+        const { name, className } = this.props
+        const iconClass = `fa fa-${name} ${className}`
         return (
             <i className={iconClass} />
         )

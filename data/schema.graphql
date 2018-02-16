@@ -73,6 +73,7 @@ type User implements Node {
     name: String
     phone: String
     email: String
+    jobTitle: String
     address: Address
     professionalExp: ProfessionalExp
     experience(after: String, first: Int, before: String, last: Int): ExperienceConnection

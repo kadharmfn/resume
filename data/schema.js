@@ -138,6 +138,10 @@ const GraphQLUser = new GraphQLObjectType({
             type: GraphQLString,
             resolve: obj => obj.email
         },
+        jobTitle: {
+            type: GraphQLString,
+            resolve: obj => obj.jobTitle
+        },
         address: {
             type: GraphQLAddress,
             resolve: obj => obj.address
