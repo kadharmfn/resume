@@ -16,14 +16,13 @@ export default class Navigation extends Component {
 
     renderLinks = links => _.map(links , link => {
         const { to, label } = link
-        return <Link className="nav-link p-3 text-white" to={to}>{label}</Link>
+        return <Link key={label} className="nav-link text-secondary text-uppercase" to={to}>{label}</Link>
     })
 
     render() {
         // const { links } = this.props
         return (
-            <nav className="nav mb-4 bg-dark">
-                <Link className="nav-link p-3 text-white" to={'/'}><Icon className="logo" name="connectdevelop" /> Resume</Link>
+            <nav className="navbar justify-content-end">
                 { this.renderLinks(links) }
             </nav>
         )

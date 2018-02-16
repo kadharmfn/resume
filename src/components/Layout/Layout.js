@@ -25,7 +25,7 @@ class Layout extends Component {
     render() {
         const { user } = this.props
         return (
-            <div className="container p-4 card">
+            <div className="p-4 card">
                 <Header user={user} showAddress={false}/>
                 <ProfessionalExp professionalExp={user.professionalExp}/>
                 <Experience details={user}/>

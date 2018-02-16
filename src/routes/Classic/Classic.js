@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { graphql, QueryRenderer } from 'react-relay'
 import environtment from '../../environtment'
 import Layout from '../../components/Layout'
+import ProgressBar from '../../components/ProgressBar'
 
 export default class Classic extends Component {
     render() {
@@ -18,12 +19,12 @@ export default class Classic extends Component {
             variables={{ showAddress: false }}
              render={({error, props}) => {
                 if (error) {
-                    return <div>Error! {error.toString()}</div>;
+                    return <div>Error! {error.toString()}</div>
                   }
                   if (!props) {
-                    return <div>Loading...</div>;
+                    return <ProgressBar />
                   }
-                  return <Layout user={props.user}/>;
+                  return <Layout user={props.user}/>
                 }} />
         )
     }

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
 import SectionHeader from '../SectionHeader'
+import SectionRow from '../SectionRow'
+import Card from '../../../components/Card'
 
 export default class Education extends Component {
     static propTypes = {
@@ -11,25 +13,22 @@ export default class Education extends Component {
     renderEducation = edges => _.map(edges, edge => {
         const { node } = edge
         const { collegeName, course, yearOfCompletion } = node
-        return (
-            <div className="row p-3">
-                <div className="col-4 small">{yearOfCompletion}</div>
-                <div className="col-8">
-                    <h6 className="text-dark">{collegeName}</h6>
-                    <h6 className="text-secondary small">{course}</h6>
-                </div>
-            </div>
-        )
+        const props = {
+            textPrimary: collegeName,
+            textSecondary: course,
+            textLeft: yearOfCompletion
+        }
+        return <SectionRow key={collegeName} {...props}/>
     })
 
     render() {
         const { education } = this.props
         const { edges } = education
         return (
-            <section className="mt-4 card">
+            <Card>
                 <SectionHeader title="Education" iconName="graduation-cap" />
                 {this.renderEducation(edges)}
-            </section>
+            </Card>
         )
     }
 }

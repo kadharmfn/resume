@@ -11,7 +11,7 @@ export default class SectionHeader extends Component {
     render() {
         const { title, iconName } = this.props
         return (
-            <h6 className="p-2 pl-4 border-bottom text-dark"><Icon className="mr-2" name={iconName} /> {title}</h6>
+            <h5 className="px-4 py-3 mb-0 text-center text-uppercase text-dark"><Icon className="mr-1 icon-md" name={iconName} /> {title}</h5>
         )
     }
 }
