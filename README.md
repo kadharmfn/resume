@@ -1,8 +1,7 @@
 # resume
 Professional Developer Resume Template built using Node JS, React , Graphql and Relay Modern
 
-### Prerequisites
-Create your profile.json under the data directory before running the application
+Included a dummy profile created using faker - [faker](https://github.com/Marak/Faker.js)
 
 * [Setup](#setup)
 * [Usage](#usage)
