@@ -18,7 +18,7 @@ export default class PersonInfo extends Component {
                     <Icon className="avatar" name="user" />
                     <h4 className="text-white">{name}</h4>
                     <h5 className="font-weight-light text-white"><Icon name="briefcase pr-2" />{jobTitle}</h5>
-                    <h5 className="p-3 text-secondary font-weight-light">{quickSummary}</h5>
+                    <p className="p-3 text-secondary justify-content-center font-weight-light">{quickSummary}</p>
                 </div>
             </div>
         )

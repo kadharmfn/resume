@@ -22,7 +22,7 @@ export default class Navigation extends Component {
     render() {
         // const { links } = this.props
         return (
-            <nav className="navbar justify-content-end">
+            <nav className="navbar justify-content-end p-3">
                 { this.renderLinks(links) }
             </nav>
         )

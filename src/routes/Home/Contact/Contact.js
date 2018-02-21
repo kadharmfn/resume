@@ -15,9 +15,13 @@ export default class Contact extends Component {
         return (
             <Card className="mt-4">
                 <SectionHeader title="Contact" iconName="address-card"/>
-                <div className="p-3">
-                    <a className="card-text" href="mailto:#"> <Icon name="envelope" /> {email}</a><br/>
-                    <a className="card-text" href={`tel:+${phone}`}><Icon name="phone" /> {phone}</a><br/>
+                <div className="row p-3">
+                    <div className="col-sm text-right">
+                        <a className="card-text" href="mailto:#"> <Icon name="envelope" /> {email}</a><br/>
+                    </div>
+                    <div className="col-sm">
+                        <a className="card-text" href={`tel:+${phone}`}><Icon name="phone" /> {phone}</a><br/>
+                    </div>
                 </div>
             </Card>
         )   

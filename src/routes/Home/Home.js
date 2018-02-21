@@ -86,10 +86,10 @@ export default class Home extends Component {
                   const skillsAndTools = this.skillsAndTools(experience)
                   const { experiences } = professionalExp
                   return (
-                      <div>
+                      <div className="">
                       <div className="bg-row row">
                             <div className="col-12 px-0">
-                                <PersonInfo name={name} jobTitle={jobTitle} quickSummary={_.slice(experiences, 0, 3)}/>
+                                <PersonInfo name={name} jobTitle={jobTitle} quickSummary={_.slice(experiences, 0, 5)}/>
                             </div>
                         </div>
                         <div className="row p-5">
