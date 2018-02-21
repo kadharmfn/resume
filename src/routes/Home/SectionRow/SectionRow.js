@@ -11,9 +11,9 @@ export default class SectionRow extends Component {
     render() {
         const { textPrimary, textSecondary, textLeft   } = this.props
         return (
-            <div className="row m-0 p-3">
-                <div className="col-6 small text-center">{textLeft}</div>
-                <div className="col-6 text-left">
+            <div className="row m-0 p-3 justify-center">
+                <div className="col-5 small text-right">{textLeft}</div>
+                <div className="col-7">
                     <h6 className="text-dark">{textPrimary}</h6>
                     <h6 className="text-dark font-weight-light">{textSecondary}</h6>
                 </div>

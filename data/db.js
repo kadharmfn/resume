@@ -1,4 +1,4 @@
-import profile from './profile.json'
+import profile from './profile'
 
 export const getEducationById = id => {
     const { education } = profile

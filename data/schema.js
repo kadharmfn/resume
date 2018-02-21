@@ -1,5 +1,5 @@
 import { GraphQLSchema, GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList } from 'graphql'
-import profile from './profile.json'
+import profile from './profile'
 import { connectionFromArray, connectionArgs, globalIdField, connectionDefinitions } from 'graphql-relay'
 import { EducationConnection } from './types/EducationType'
 import { nodeField, nodeInterface } from './node'
