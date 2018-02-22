@@ -1,12 +1,13 @@
 const path = require('path')
+const UglifyJSPlugin = require('uglify-js-plugin')
 
 const config = {
     entry: './src/Root.js',
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.join(__dirname, 'dist')
     },
-    devtool: "inline-source-map",
+    devtool: "cheap-module-source-map",
     devServer: {
         contentBase: './dist',
         stats: {colors: true},
@@ -19,7 +20,12 @@ const config = {
                 loader: 'babel-loader'
             }
         ]
-    }
+    },
+    plugins: [
+         new UglifyJSPlugin({
+            sourceMap: true
+        })
+    ]
 }
 
 module.exports = config
