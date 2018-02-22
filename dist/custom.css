@@ -1,0 +1,40 @@
+.text-info, .avator {
+    color: #3cb66f !important;
+}
+
+.bg-row, .header {
+    background-color: #0f202e !important;
+}
+
+.bg-row-secondary{
+    background-color: #FAFAFA !important;
+}
+
+.logo {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 16px !important;
+}
+
+h6 {
+    font-size: 14px !important;
+}
+
+.card {
+    background: none !important;
+    border: none !important;
+}
+
+.avatar {
+    font-size: 120px !important;
+}
+
+.icon-md {
+    font-size: 24px !important;
+}
+
+.text-secondary {
+    color: #b4b4b4 !important;
+}
